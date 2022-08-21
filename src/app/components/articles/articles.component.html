@@ -1,0 +1,25 @@
+<div class="loading" *ngIf="!articles">
+    <img src="assets/img/loading.gif" alt="Loading...">
+</div>
+
+<div class="loading" *ngIf="articles.length==0">
+    <p>No hay articulos para mostrar</p>
+</div>
+
+<div *ngIf="articles.length!=0" id="articles">
+    <article class="article-item" id="article-template" *ngFor="let article of articles">
+        <div class="image-wrap">
+            <img src="{{url + 'get-image/' +article.image}}" alt="Paisaje" *ngIf="article.image" />
+            <img src="assets\img\paisaje.jpg" alt="Paisaje" *ngIf="article.image== null" />
+        </div>
+
+        <h2>{{article.title}}</h2>
+        <span class="date">
+            {{article.date | amLocale: 'es' | amTimeAgo}}
+        </span>
+        <a [routerLink]="['/blog/article',article._id]">Leer más</a>
+
+        <div class="clearfix"></div>
+    </article>
+    <!--AÑADIR ARTICULOS VIA JS-->
+</div>

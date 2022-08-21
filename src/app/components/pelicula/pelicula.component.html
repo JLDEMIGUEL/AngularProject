@@ -1,0 +1,20 @@
+<article class="article-item" id="article-template" >
+    <div class="image-wrap">
+        <img src="{{pelicula.image}}" alt="{{pelicula.title}}" />
+    </div>
+
+    <h2>{{pelicula.title}}</h2>
+    <span class="date">
+        Hace 5 minutos
+    </span>
+    <span class="year" [style.font-weight]="pelicula.year>2020?900:400">
+        {{pelicula.year}}
+    </span>
+    <a href="#">Ver...</a>
+
+    <button (click)="seleccionar($event,pelicula)">
+        Seleccionar pelicula favorita
+    </button>
+
+    <div class="clearfix"></div>
+</article>
