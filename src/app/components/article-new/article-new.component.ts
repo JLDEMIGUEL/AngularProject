@@ -22,7 +22,7 @@ export class ArticleNewComponent implements OnInit {
     formatsAllowed: ".jpg,.png,.gif,.jpeg",
     maxSize: 50,
     uploadAPI: {
-      url: Global.url + "/upload-image"
+      url: Global.url + "upload-image"
     },
     theme: "attachPin",
     hideProgressBar: true,
