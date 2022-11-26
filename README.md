@@ -1,5 +1,5 @@
 # AngularProject
 
-Aplicacion web Angular con Blog (almacenado en MongoDB y comunicado mediante backend Node.js)
 
-https://angularproject-jldemiguel.herokuapp.com/
+First Angular Project.
+Web app with Angular. Used to display articles stored in a MongoDB.
